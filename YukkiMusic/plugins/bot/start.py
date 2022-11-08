@@ -15,7 +15,7 @@ from pyrogram.types import (InlineKeyboardButton,
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from config import BANNED_USERS
+from config import BANNED_USERS, PING_IMG_URL
 from config.config import OWNER_ID
 from strings import get_command, get_string
 from YukkiMusic import Telegram, YouTube, app
@@ -230,6 +230,7 @@ async def start_comm(client, message: Message, _):
 @LanguageStart
 async def testbot(client, message: Message, _):
     out = start_pannel(_)
+    photo=PING_IMG_URL,
     return await message.reply_text(
         _["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
