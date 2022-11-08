@@ -166,7 +166,7 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", None)
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/8f12128f4e6385025ed76.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
