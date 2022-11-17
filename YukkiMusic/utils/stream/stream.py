@@ -168,12 +168,13 @@ async def stream(
                 user_id,
                 "video" if video else "audio",
             )
+            button = telegram_markup(_, chat_id)
             position = len(db.get(chat_id)) - 1
-            await app.send_message(
-                original_chat_id,
+            await mystic.edit_text(
                 _["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
+                reply_markup=InlineKeyboardMarkup(button),
             )
         else:
             if not forceplay:
@@ -221,12 +222,13 @@ async def stream(
                 user_id,
                 "audio",
             )
+            button = telegram_markup(_, chat_id)
             position = len(db.get(chat_id)) - 1
-            await app.send_message(
-                original_chat_id,
+            await mystic.edit_text(
                 _["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
+                reply_markup=InlineKeyboardMarkup(button),
             )
         else:
             if not forceplay:
@@ -275,12 +277,13 @@ async def stream(
                 user_id,
                 "video" if video else "audio",
             )
+            button = telegram_markup(_, chat_id)
             position = len(db.get(chat_id)) - 1
-            await app.send_message(
-                original_chat_id,
+            await mystic.edit_text(
                 _["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
+                reply_markup=InlineKeyboardMarkup(button),
             )
         else:
             if not forceplay:
@@ -333,12 +336,13 @@ async def stream(
                 user_id,
                 "video" if video else "audio",
             )
+            button = telegram_markup(_, chat_id)
             position = len(db.get(chat_id)) - 1
-            await app.send_message(
-                original_chat_id,
+            await mystic.edit_text(
                 _["queue_4"].format(
                     position, title[:30], duration_min, user_name
                 ),
+                reply_markup=InlineKeyboardMarkup(button),
             )
         else:
             if not forceplay:
@@ -388,11 +392,13 @@ async def stream(
                 link,
                 "video" if video else "audio",
             )
+            button = telegram_markup(_, chat_id)
             position = len(db.get(chat_id)) - 1
             await mystic.edit_text(
                 _["queue_4"].format(
                     position, title[:30], duration_min, user_name
-                )
+                ),
+                reply_markup=InlineKeyboardMarkup(button),
             )
         else:
             if not forceplay:
