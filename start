@@ -1,1 +1,2 @@
+/bin/sh -c bash\ start
 python3 -m YukkiMusic
